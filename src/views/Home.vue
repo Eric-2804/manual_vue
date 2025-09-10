@@ -1,12 +1,16 @@
 <template>
     <section>
-        <!-- Barra de búsqueda -->
+
+        <div class="titulo">
+            <img src="../assets/IMG.png" alt="">
+            <h1>Manual Vue</h1>
+        </div>
         <div class="search-container">
             <input type="text" placeholder="Buscar... (CTRL + K)" />
             <button>🔍</button>
         </div>
 
-        <!-- Navbar -->
+
         <nav>
             <router-link to="/css">
                 <span>🎨</span>CSS
@@ -22,7 +26,6 @@
             </router-link>
         </nav>
 
-        <!-- Contenido de prueba -->
         <main>
             <h2>Bienvenido a la guía de Vue 🎉</h2>
             <p>Aquí podrás aprender Vue paso a paso con ejemplos prácticos.</p>
@@ -31,15 +34,36 @@
 </template>
 
 <style scoped>
-/* Fondo general */
 section {
-    min-height: 100vh;
+    width: 100%;
     background: radial-gradient(circle at top left, #1e293b, #0f172a);
     color: white;
     font-family: Arial, sans-serif;
 }
 
-/* Barra de búsqueda */
+
+.titulo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.titulo img {
+    width: 150px;
+    height: auto;
+
+}
+
+.titulo h1 {
+    color: white;
+    margin-right: 100px;
+}
+
+
 .search-container {
     display: flex;
     align-items: center;
