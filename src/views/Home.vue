@@ -10,19 +10,12 @@
             <button>🔍</button>
         </div>
 
-
         <nav>
-            <router-link to="/css">
-                <span>🎨</span>CSS
+            <router-link to="/docs">
+                <span>📘</span> Documentación
             </router-link>
-            <router-link to="/javascript">
-                <span>⚡</span>JavaScript
-            </router-link>
-            <router-link to="/ecosistema">
-                <span>🌐</span>Ecosistema
-            </router-link>
-            <router-link to="/terminal">
-                <span>⌘</span>Terminal
+            <router-link to="/about">
+                <span>ℹ️</span> Acerca
             </router-link>
         </nav>
 
@@ -41,9 +34,7 @@ section {
     font-family: Arial, sans-serif;
 }
 
-
 .titulo {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,14 +46,12 @@ section {
 .titulo img {
     width: 150px;
     height: auto;
-
 }
 
 .titulo h1 {
     color: white;
     margin-right: 100px;
 }
-
 
 .search-container {
     display: flex;
