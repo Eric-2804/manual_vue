@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="docs-container">
         <h1>📘 Manual de Vue 3 para Principiantes</h1>
 
         <!-- Introducción -->
@@ -97,3 +97,16 @@ function incrementar() { count.value++ }
 <script setup>
 import DocCard from "../components/DocCard.vue"
 </script>
+
+<style scoped>
+.docs-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.docs-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+</style>

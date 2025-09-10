@@ -1,7 +1,7 @@
 <template>
-  <div class="app">
+  <div id="app">
     <Navbar />
-    <main class="p-6">
+    <main class="content">
       <router-view />
     </main>
   </div>
@@ -12,20 +12,26 @@ import Navbar from "./components/Navbar.vue"
 </script>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f9fafb;
-  color: #333;
-}
-.app {
+/* Fondo global oscuro */
+#app {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+
+  /* 🎨 Fondo azul oscuro */
+  background: #0d1b2a;
+  color: #f9fafb;
+
+  font-family: 'Inter', sans-serif;
+  margin: 0;
 }
-main {
+
+.content {
   flex: 1;
   max-width: 900px;
   margin: auto;
+  padding: 2rem;
 }
 </style>
+
+
