@@ -4,8 +4,8 @@ import App from "./App.vue"
 
 // Views
 import Home from "./views/Home.vue"
-import Docs from "./views/Docs.vue"
-import About from "./views/About.vue"
+import Docs from "./views/Introduccion.vue"
+import About from "./views/InicioRapido.vue"
 
 // Router
 const router = createRouter({
