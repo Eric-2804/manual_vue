@@ -26,10 +26,16 @@
       </router-link>
     </nav>
 
-    <main>
-      <h2>Bienvenido a la guía de Vue 🎉</h2>
-      <p>Aquí podrás aprender Vue paso a paso con ejemplos prácticos.</p>
-    </main>
+   <div class="contenido">
+
+
+
+
+
+   </div>
+
+
+
   </section>
 </template>
 
@@ -103,7 +109,7 @@ margin-right: 100px;
   background-color: #2c9e6f;
 }
 
-/* Navbar */
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -130,15 +136,10 @@ nav a span {
   margin-bottom: 3px;
 }
 
-/* Contenido */
-main {
-  padding: 20px;
-  text-align: center;
+.contenido{
+
+
+
 }
 
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #42b883;
-}
 </style>
