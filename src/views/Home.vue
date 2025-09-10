@@ -2,7 +2,7 @@
     <section>
 
         <div class="titulo">
-            <img src="../assets/IMG.png" alt="">
+            <img src="../assets/vue.png" alt="">
             <h1>Manual Vue</h1>
         </div>
         <div class="search-container">
@@ -12,23 +12,45 @@
 
         <nav>
             <router-link to="/docs">
-                <span>📘</span> Documentación
+                <span><img src="../assets/icons/icons1.png" alt=""></span> Documentación
             </router-link>
             <router-link to="/about">
-                <span>ℹ️</span> Acerca
+                <span><img src="../assets/icons/icons2.png" alt=""></span> Acerca
             </router-link>
         </nav>
 
-        <main>
-            <h2>Bienvenido a la guía de Vue 🎉</h2>
-            <p>Aquí podrás aprender Vue paso a paso con ejemplos prácticos.</p>
-        </main>
+        <div class="contenido">
+         
+          <div class="card">
+            <img src="../assets/imgcard/card1.webp" alt="">
+          </div>
+          <div class="card">
+            <img src="../assets/imgcard/card2.jpeg" alt="">
+          </div>
+          <div class="card">
+            <img src="../assets/imgcard/card3.jpg" alt="">
+          </div>
+          <div class="card">
+            <img src="../assets/imgcard/card4.png" alt="">
+          </div>
+          <div class="card">
+            <img src="../assets/imgcard/card5.jpg" alt="">
+          </div>
+          <div class="card">
+            <img src="../assets/imgcard/card6.png" alt="">
+          </div>
+
+        </div>
+           
     </section>
 </template>
 
 <style scoped>
+
+
+
 section {
-    width: 100%;
+    min-height: 200vh;
     background: radial-gradient(circle at top left, #1e293b, #0f172a);
     color: white;
     font-family: Arial, sans-serif;
@@ -44,13 +66,29 @@ section {
 }
 
 .titulo img {
-    width: 150px;
+    width: 50px;
     height: auto;
+    border-radius: 10px;
+    margin-right: 3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .titulo h1 {
+    
     color: white;
     margin-right: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: text-shadow 0.3s ease;
+    text-shadow: 0 0 5px #42b883, 0 0 10px #42b883, 0 0 20px #2c9e6f;
+}
+
+
+
+.titulo h1:hover {
+  text-shadow: 0 0 10px #42b883, 0 0 20px #42b883, 0 0 40px #2c9e6f;
+}
+.titulo img:hover {
+  transform: scale(1.20); /* agranda un poquito */
 }
 
 .search-container {
@@ -101,12 +139,24 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+nav img {
+
+    height: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+nav img:hover {
+  transform: scale(1.20); 
+}
+
 nav a {
     text-decoration: none;
     color: #d1d5db;
     font-size: 14px;
     text-align: center;
     transition: color 0.2s ease;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 nav a:hover {
@@ -119,15 +169,29 @@ nav a span {
     margin-bottom: 3px;
 }
 
-/* Contenido */
-main {
-    padding: 20px;
-    text-align: center;
+.contenido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 50px;
 }
 
-main h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #42b883;
+
+.card{
+  background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card img{
+ height: 250px;
+    border-radius: 10px;
 }
 </style>
