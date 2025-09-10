@@ -11,44 +11,66 @@
         </div>
 
         <nav>
-            <router-link to="/docs">
-                <span><img src="../assets/icons/icons1.png" alt=""></span> Documentación
+            <router-link to="/introduccion">
+                <span><img src="../assets/icons/icons1.png" alt=""></span> Introducción
             </router-link>
-            <router-link to="/about">
-                <span><img src="../assets/icons/icons2.png" alt=""></span> Acerca
+            <router-link to="/inicio-rapido">
+                <span><img src="../assets/icons/icons2.png" alt=""></span> Inicio Rápido
+            </router-link>
+            <router-link to="/creacion-app">
+                <span><img src="../assets/icons/icons3.png" alt=""></span> Creación de App
+            </router-link>
+            <router-link to="/sintaxis-plantilla">
+                <span><img src="../assets/icons/icons4.png" alt=""></span> Sintaxis Plantilla
+            </router-link>
+            <router-link to="/propiedades-estilo">
+                <span><img src="../assets/icons/icons5.png" alt=""></span> Propiedades & Estilo
+            </router-link>
+            <router-link to="/renderizado">
+                <span><img src="../assets/icons/icons6.png" alt=""></span> Renderizado
+            </router-link>
+            <router-link to="/eventos-form">
+                <span><img src="../assets/icons/icons7.png" alt=""></span> Eventos & Formularios
+            </router-link>
+            <router-link to="/reactividad-avanzada">
+                <span><img src="../assets/icons/icons8.png" alt=""></span> Reactividad Avanzada
+            </router-link>
+            <router-link to="/componentes-basicos">
+                <span><img src="../assets/icons/icons9.png" alt=""></span> Componentes Básicos
+            </router-link>
+            <router-link to="/ciclo-vida">
+                <span><img src="../assets/icons/icons10.png" alt=""></span> Ciclo de Vida
             </router-link>
         </nav>
 
+
         <div class="contenido">
-         
-          <div class="card">
-            <img src="../assets/imgcard/card1.webp" alt="">
-          </div>
-          <div class="card">
-            <img src="../assets/imgcard/card2.jpeg" alt="">
-          </div>
-          <div class="card">
-            <img src="../assets/imgcard/card3.jpg" alt="">
-          </div>
-          <div class="card">
-            <img src="../assets/imgcard/card4.png" alt="">
-          </div>
-          <div class="card">
-            <img src="../assets/imgcard/card5.jpg" alt="">
-          </div>
-          <div class="card">
-            <img src="../assets/imgcard/card6.png" alt="">
-          </div>
+
+            <div class="card">
+                <img src="../assets/imgcard/card1.webp" alt="">
+            </div>
+            <div class="card">
+                <img src="../assets/imgcard/card2.jpeg" alt="">
+            </div>
+            <div class="card">
+                <img src="../assets/imgcard/card3.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="../assets/imgcard/card4.png" alt="">
+            </div>
+            <div class="card">
+                <img src="../assets/imgcard/card5.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src="../assets/imgcard/card6.png" alt="">
+            </div>
 
         </div>
-           
+
     </section>
 </template>
 
 <style scoped>
-
-
-
 section {
     min-height: 200vh;
     background: radial-gradient(circle at top left, #1e293b, #0f172a);
@@ -74,7 +96,7 @@ section {
 }
 
 .titulo h1 {
-    
+
     color: white;
     margin-right: 100px;
     font-family: 'Courier New', Courier, monospace;
@@ -85,10 +107,12 @@ section {
 
 
 .titulo h1:hover {
-  text-shadow: 0 0 10px #42b883, 0 0 20px #42b883, 0 0 40px #2c9e6f;
+    text-shadow: 0 0 10px #42b883, 0 0 20px #42b883, 0 0 40px #2c9e6f;
 }
+
 .titulo img:hover {
-  transform: scale(1.20); /* agranda un poquito */
+    transform: scale(1.20);
+    /* agranda un poquito */
 }
 
 .search-container {
@@ -147,7 +171,7 @@ nav img {
 
 
 nav img:hover {
-  transform: scale(1.20); 
+    transform: scale(1.20);
 }
 
 nav a {
@@ -170,15 +194,15 @@ nav a span {
 }
 
 .contenido {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
-  margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    margin: 50px;
 }
 
 
-.card{
-  background-color: #ffffff;
+.card {
+    background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 20px;
     text-align: center;
@@ -190,8 +214,8 @@ nav a span {
     margin-top: 20px;
 }
 
-.card img{
- height: 250px;
+.card img {
+    height: 250px;
     border-radius: 10px;
 }
 </style>
