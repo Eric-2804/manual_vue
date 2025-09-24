@@ -17,30 +17,6 @@
             <router-link to="/inicio-rapido">
                 <span><img src="../assets/icons/icons2.png" alt=""></span> Inicio Rápido
             </router-link>
-            <router-link to="/creacion-app">
-                <span><img src="../assets/icons/icons3.png" alt=""></span> Creación de App
-            </router-link>
-            <router-link to="/sintaxis-plantilla">
-                <span><img src="../assets/icons/icons4.png" alt=""></span> Sintaxis Plantilla
-            </router-link>
-            <router-link to="/propiedades-estilo">
-                <span><img src="../assets/icons/icons5.png" alt=""></span> Propiedades & Estilo
-            </router-link>
-            <router-link to="/renderizado">
-                <span><img src="../assets/icons/icons6.png" alt=""></span> Renderizado
-            </router-link>
-            <router-link to="/eventos-form">
-                <span><img src="../assets/icons/icons7.png" alt=""></span> Eventos & Formularios
-            </router-link>
-            <router-link to="/reactividad-avanzada">
-                <span><img src="../assets/icons/icons8.png" alt=""></span> Reactividad Avanzada
-            </router-link>
-            <router-link to="/componentes-basicos">
-                <span><img src="../assets/icons/icons9.png" alt=""></span> Componentes Básicos
-            </router-link>
-            <router-link to="/ciclo-vida">
-                <span><img src="../assets/icons/icons10.png" alt=""></span> Ciclo de Vida
-            </router-link>
         </nav>
 
 
