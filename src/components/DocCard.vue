@@ -1,29 +1,27 @@
 <template>
-    <div class="card">
-        <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
+    <div class="card1">
+        
+
+
+
+
+
         <slot />
     </div>
 </template>
 
-<script setup>
-defineProps({
-    title: String,
-    description: String
-})
-</script>
+
 
 <style scoped>
-.card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    margin: 1.5rem 0;
-    transition: transform 0.2s ease;
+.card1 {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 20px;
+    color: #000000;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
+
 </style>

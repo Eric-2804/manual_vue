@@ -1,139 +1,125 @@
 <template>
-    <section class="docs-container">
-        <h1>📘 Manual de Vue 3 para Principiantes</h1>
+  <section class="docs-container">
 
-        <!-- Introducción -->
-        <DocCard title="👋 Introducción" description="¿Qué es Vue 3?">
-            <p>
-                Vue (se pronuncia como <i>view</i>) es un <b>framework de JavaScript</b>
-                que sirve para crear <b>interfaces de usuario</b>. Usa HTML, CSS y JS de
-                siempre, pero les da superpoderes para trabajar de forma <b>más clara y organizada</b>.
-            </p>
+    <div class="manual-titulo">
+    <img src="../assets/introduccion/menu.png" alt="">
+    <h1>Manual de Vue 3 para Principiantes</h1>
+  </div>
 
-            <p>
-                Lo mejor: Vue es <b>reactivo</b>. Si un dato cambia en tu JavaScript, la
-                pantalla se actualiza automáticamente sin que tengas que tocar el DOM.
-            </p>
+      <div class="contenido">
 
-            <h3>Ejemplo rápido</h3>
-            <pre><code>import { createApp, ref } from 'vue'
 
-createApp({
-  setup() {
-    return { count: ref(0) }
-  }
-}).mount('#app')</code></pre>
+      <DocCard>
+        <div class="titulo">
+      <img src="../assets/introduccion/card1.png" alt="">
+      <h2>Introducción</h2> 
+    </div>
 
-            <pre><code>&lt;div id="app"&gt;
-  &lt;button @click="count++"&gt;
-    Contador: {{ count }}
-  &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+      <div class="subtitulo">
+      <img src="../assets/vue.png" alt="">
+      <h3>¿Qué es Vue 3?</h3>
+       </div>
 
-            <p>
-                👉 Resultado: un contador que sube cada vez que haces clic. ¡Así de simple!
-            </p>
-        </DocCard>
+      <p>
+        Vue es un <b>framework progresivo</b> de JavaScript para construir interfaces de usuario modernas.
+        Se basa en HTML, CSS y JS, y usa un modelo declarativo y orientado a componentes.
+      </p>
+      <p>
+        En Vue 3 se presenta la <b>Composition API</b>, que permite organizar la lógica de componentes
+        de forma más clara usando <code>&lt;script setup&gt;</code>.
+      </p>
+    </DocCard>
 
-        <!-- Prerrequisitos -->
-        <DocCard title="📚 Prerrequisitos" description="Qué necesitas saber antes">
-            <p>
-                Antes de empezar con Vue, asegúrate de conocer lo básico de
-                <b>HTML, CSS y JavaScript</b>. No necesitas ser un experto, pero sí tener
-                una idea de cómo funcionan.
-            </p>
-            <p>
-                Si nunca has hecho frontend, lo mejor es aprender esos fundamentos y luego
-                volver a Vue. Créeme, ¡te será mucho más fácil!
-            </p>
-        </DocCard>
 
-        <!-- El marco progresivo -->
-        <DocCard title="🌍 El Marco Progresivo" description="¿Por qué Vue es tan flexible?">
-            <p>
-                Vue es progresivo: significa que <b>crece contigo</b>. Puedes usarlo para:
-            </p>
-            <ul>
-                <li>🌐 Dar vida a un HTML estático.</li>
-                <li>🧩 Insertar un componente en otra web.</li>
-                <li>⚡ Crear una app completa de una sola página (SPA).</li>
-                <li>💻 Renderizar en servidor (SSR) o generar sitios estáticos (SSG).</li>
-                <li>📱 Incluso apps móviles o de escritorio.</li>
-            </ul>
-            <p>
-                Lo importante: <b>los conceptos básicos son siempre los mismos</b>. Lo que
-                aprendas ahora servirá en proyectos grandes o pequeños.
-            </p>
-        </DocCard>
 
-        <!-- Componentes de un solo archivo -->
-        <DocCard title="📦 Componentes de un solo archivo" description="SFC en Vue">
-            <p>
-                En proyectos modernos usamos archivos <code>.vue</code>, llamados
-                <b>Single File Components (SFC)</b>. Cada componente tiene:
-            </p>
-            <ul>
-                <li>🔹 <b>JavaScript</b> → la lógica</li>
-                <li>🔹 <b>HTML</b> → la estructura</li>
-                <li>🔹 <b>CSS</b> → los estilos</li>
-            </ul>
 
-            <pre><code>&lt;script setup&gt;
+
+
+    <!-- Instalación -->
+    <DocCard title="⚙️ Instalación" description="Cómo instalar Vue en Windows y Linux">
+      <h3>Windows</h3>
+      <p>1. Descarga Node.js LTS desde <a href="https://nodejs.org" target="_blank">nodejs.org</a>.</p>
+      <p>2. Instálalo y verifica con <code>node -v</code> y <code>npm -v</code>.</p>
+
+      <h3>Linux (Debian/Ubuntu)</h3>
+      <p>1. Ejecuta en la terminal:</p>
+      <pre><code>sudo apt update
+sudo apt install nodejs npm</code></pre>
+      <p>2. Verifica con <code>node -v</code> y <code>npm -v</code>.</p>
+
+      <h3>Crear un proyecto Vue</h3>
+      <pre><code>npm create vue@latest</code></pre>
+    </DocCard>
+
+    <!-- Conceptos Básicos -->
+    <DocCard title="📦 Conceptos Básicos" description="Tu primera app con Vue">
+      <pre><code>import { createApp } from 'vue'
+import App from './App.vue'
+
+const app = createApp(App)
+app.mount('#app')</code></pre>
+
+      <p>Usamos <code>ref()</code> para definir datos reactivos:</p>
+
+      <pre><code>import { ref } from 'vue'
+const mensaje = ref('Hola Mundo')</code></pre>
+    </DocCard>
+
+    <!-- Renderizado -->
+    <DocCard title="🎨 Renderizado" description="Cómo mostrar datos en la plantilla">
+      <ul>
+        <li>Interpolación: <code>{{ mensaje }}</code></li>
+        <li>Atributos dinámicos: <code>&lt;a :href="url"&gt;</code></li>
+        <li>Condicionales: <code>v-if</code>, <code>v-else</code></li>
+        <li>Listas: <code>v-for</code></li>
+        <li>Eventos: <code>@click</code></li>
+      </ul>
+    </DocCard>
+
+    <!-- Componentes -->
+    <DocCard title="🧩 Componentes" description="Reutiliza piezas de interfaz">
+      <pre><code>&lt;script setup&gt;
 import { ref } from 'vue'
 const count = ref(0)
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;button @click="count++"&gt;Contador: {{ count }}&lt;/button&gt;
-&lt;/template&gt;
-
-&lt;style scoped&gt;
-button { font-weight: bold; }
-&lt;/style&gt;</code></pre>
-        </DocCard>
-
-        <!-- Estilos de API -->
-        <DocCard title="🧑‍💻 Estilos de API" description="Options API vs Composition API">
-            <h3>1. Options API (clásica)</h3>
-            <pre><code>&lt;script&gt;
-export default {
-  data() {
-    return { count: 0 }
-  },
-  methods: {
-    incrementar() { this.count++ }
-  },
-  mounted() {
-    console.log("Contador inicial:", this.count)
-  }
-}
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;button @click="incrementar"&gt;Contador: {{ count }}&lt;/button&gt;
-&lt;/template&gt;</code></pre>
-
-            <h3>2. Composition API (moderna)</h3>
-            <pre><code>&lt;script setup&gt;
-import { ref, onMounted } from 'vue'
-const count = ref(0)
 function incrementar() { count.value++ }
-onMounted(() => {
-  console.log("Contador inicial:", count.value)
-})
 &lt;/script&gt;
 
 &lt;template&gt;
   &lt;button @click="incrementar"&gt;Contador: {{ count }}&lt;/button&gt;
 &lt;/template&gt;</code></pre>
+    </DocCard>
 
-            <p>
-                👉 Ambas hacen lo mismo.
-                - La <b>Options API</b> es más fácil para empezar o proyectos simples.
-                - La <b>Composition API</b> es más flexible para proyectos grandes.
-            </p>
-        </DocCard>
-    </section>
+    <!-- Uso Avanzado -->
+    <DocCard title="🚀 Uso Avanzado" description="Composables, Vue Router y Pinia">
+      <h3>Composables</h3>
+      <p>Funciones reutilizables como <code>useMouse()</code> o <code>useCounter()</code>.</p>
+
+      <h3>Vue Router</h3>
+      <pre><code>npm install vue-router@4</code></pre>
+
+      <h3>Pinia</h3>
+      <pre><code>npm install pinia</code></pre>
+    </DocCard>
+
+    <!-- Recursos -->
+    <DocCard title="📚 Recursos" description="Sitios recomendados">
+      <ul>
+        <li><a href="https://vuejs.org/guide/" target="_blank">Guía oficial Vue 3</a></li>
+        <li><a href="https://router.vuejs.org/" target="_blank">Vue Router</a></li>
+        <li><a href="https://pinia.vuejs.org/" target="_blank">Pinia</a></li>
+        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+      </ul>
+    </DocCard>
+
+
+
+
+
+
+
+
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -141,14 +127,45 @@ import DocCard from "../components/DocCard.vue"
 </script>
 
 <style scoped>
+
 .docs-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1.5rem;
+  min-height: 100vh; 
+  margin: 0; 
+  padding: 40px 20px;
+  background-color: #111827;
+  color: #f9fafb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
 }
 
-.docs-container h1 {
-    text-align: center;
-    margin-bottom: 2rem;
+
+.manual-titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: 0 0 5px #42b883, 0 0 10px #42b883, 0 0 20px #2c9e6f;;
 }
+
+
+.manual-titulo img{
+height: 50px;
+}
+
+.manual-titulo h1 {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  transition: text-shadow 0.3s ease;
+    text-shadow: 0 0 5px #42b883, 0 0 10px #42b883, 0 0 20px #2c9e6f;
+}
+
+
+.titulo {
+display: flex;
+justify-content: center;
+}
+
+
+
 </style>
