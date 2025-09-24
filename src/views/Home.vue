@@ -34,9 +34,6 @@
             <div class="card">
                 <img src="../assets/imgcard/card4.png" alt="">
             </div>
-            <div class="card">
-                <img src="../assets/imgcard/card5.jpg" alt="">
-            </div>
     
 
         </div>
