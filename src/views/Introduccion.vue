@@ -1,171 +1,262 @@
 <template>
-  <section class="docs-container">
+  <section>
+    <Header />
+    <NavBar />
 
-    <div class="manual-titulo">
-    <img src="../assets/introduccion/menu.png" alt="">
-    <h1>Manual de Vue 3 para Principiantes</h1>
-  </div>
+    <div class="contenido">
 
-      <div class="contenido">
+      <div class="style1">
+        <div class="intro_img">
+          <img src="../assets/introduccion/img1.png" alt="imagen vue" />
+        </div>
 
+        <div class="text1">
+          <h2>¿Qué es Vue?</h2>
+          <h3>
+            Vue es un framework progresivo de JavaScript utilizado para construir
+            interfaces de usuario interactivas. Su enfoque principal es la vista,
+            permitiendo crear componentes reutilizables y reactivos.
+          </h3>
+        </div>
+      </div>
 
-      <DocCard>
-        <div class="titulo">
-      <img src="../assets/introduccion/card1.png" alt="">
-      <h2>Introducción</h2> 
-    </div>
+      <div class="style2">
+        <div class="intro_img">
+          <img src="../assets/introduccion/img2.png" alt="imagen quasar" />
+        </div>
+        <div class="text2">
+          <h2>¿Qué es Quasar?</h2>
+          <h3>
+            Quasar es un framework basado en Vue que te permite crear aplicaciones
+            web, móviles y de escritorio con un solo código base.
+          </h3>
+          <p>Con Vue puedes crear:</p>
+          <h3>
+            - Páginas que muestren listas de tareas.<br>
+            - Formularios que guarden información.<br>
+            - Aplicaciones completas, como redes sociales, tiendas en línea o paneles de administración.<br>
+          </h3>
+        </div>
+      </div>
 
-      <div class="subtitulo">
-      <img src="../assets/vue.png" alt="">
-      <h3>¿Qué es Vue 3?</h3>
-       </div>
+      <div class="style1">
+        <div class="intro_img">
+          <img src="../assets/introduccion/img3.png" alt="imagen vue" />
+        </div>
 
-      <p>
-        Vue es un <b>framework progresivo</b> de JavaScript para construir interfaces de usuario modernas.
-        Se basa en HTML, CSS y JS, y usa un modelo declarativo y orientado a componentes.
-      </p>
-      <p>
-        En Vue 3 se presenta la <b>Composition API</b>, que permite organizar la lógica de componentes
-        de forma más clara usando <code>&lt;script setup&gt;</code>.
-      </p>
-    </DocCard>
+        <div class="text1">
+          <h2>¿Cómo funciona Vue por dentro?</h2>
+          <h3>
+            Vue usa algo que se llama “reactividad”.
+            Eso significa que cuando cambias un dato, Vue actualiza automáticamente la parte de la página que
+            depende de ese dato.
+          </h3>
+          <p>Ejemplo simple de cómo funciona la reactividad:</p>
+          <h3>Si tienes un dato que dice “nombre = Juan”, y lo muestras en la pantalla, Vue hará que si cambias ese
+            nombre a “María”, automáticamente aparezca “María” en la página sin que tú recargues.
+            Esa es la magia de Vue: conecta los datos con lo que se ve en pantalla.</h3>
+        </div>
+      </div>
 
+      <div class="style2">
+        <div class="intro_img">
+          <img src="../assets/introduccion/img4.png" alt="imagen quasar" />
+        </div>
+        <div class="text2">
+          <h2>¿Por qué usar Vue?</h2>
+          <h3>
+            Porque es fácil de aprender, rápido y ordenado.
+            Otras herramientas (como React o Angular) también sirven para lo mismo, pero Vue es más amigable
+            para comenzar.
+            Además, su sintaxis se parece mucho a HTML y CSS, que son los lenguajes que ya usan los sitios
+            web.
+          </h3>
+          <p>Ventajas de Vue:</p>
+          <h3>
+            - Es liviano y rápido. <br>
+            - Es fácil de entender para principiantes.<br>
+            - Permite dividir tu página en piezas pequeñas llamadas “componentes”.<br>
+            - Tiene una gran comunidad y documentación.
+          </h3>
+        </div>
+      </div>
 
+      <div class="style1">
+        <div class="intro_img">
+          <img src="../assets/introduccion/img5.png" alt="imagen vue" />
+        </div>
 
+        <div class="text1">
+          <h2>Comparaciones simples</h2>
+          <h3>
+            Si HTML fuera como una hoja de papel donde dibujas tus ideas,
+            Vue sería un marcador mágico que actualiza los dibujos por ti cuando cambias algo en tu mente.
+            Por eso, Vue ahorra tiempo y evita errores.
+          </h3>
+        </div>
+      </div>
 
-
-
-    <!-- Instalación -->
-    <DocCard title="⚙️ Instalación" description="Cómo instalar Vue en Windows y Linux">
-      <h3>Windows</h3>
-      <p>1. Descarga Node.js LTS desde <a href="https://nodejs.org" target="_blank">nodejs.org</a>.</p>
-      <p>2. Instálalo y verifica con <code>node -v</code> y <code>npm -v</code>.</p>
-
-      <h3>Linux (Debian/Ubuntu)</h3>
-      <p>1. Ejecuta en la terminal:</p>
-      <pre><code>sudo apt update
-sudo apt install nodejs npm</code></pre>
-      <p>2. Verifica con <code>node -v</code> y <code>npm -v</code>.</p>
-
-      <h3>Crear un proyecto Vue</h3>
-      <pre><code>npm create vue@latest</code></pre>
-    </DocCard>
-
-    <!-- Conceptos Básicos -->
-    <DocCard title="📦 Conceptos Básicos" description="Tu primera app con Vue">
-      <pre><code>import { createApp } from 'vue'
-import App from './App.vue'
-
-const app = createApp(App)
-app.mount('#app')</code></pre>
-
-      <p>Usamos <code>ref()</code> para definir datos reactivos:</p>
-
-      <pre><code>import { ref } from 'vue'
-const mensaje = ref('Hola Mundo')</code></pre>
-    </DocCard>
-
-    <!-- Renderizado -->
-    <DocCard title="🎨 Renderizado" description="Cómo mostrar datos en la plantilla">
-      <ul>
-        <li>Interpolación: <code>{{ mensaje }}</code></li>
-        <li>Atributos dinámicos: <code>&lt;a :href="url"&gt;</code></li>
-        <li>Condicionales: <code>v-if</code>, <code>v-else</code></li>
-        <li>Listas: <code>v-for</code></li>
-        <li>Eventos: <code>@click</code></li>
-      </ul>
-    </DocCard>
-
-    <!-- Componentes -->
-    <DocCard title="🧩 Componentes" description="Reutiliza piezas de interfaz">
-      <pre><code>&lt;script setup&gt;
-import { ref } from 'vue'
-const count = ref(0)
-function incrementar() { count.value++ }
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;button @click="incrementar"&gt;Contador: {{ count }}&lt;/button&gt;
-&lt;/template&gt;</code></pre>
-    </DocCard>
-
-    <!-- Uso Avanzado -->
-    <DocCard title="🚀 Uso Avanzado" description="Composables, Vue Router y Pinia">
-      <h3>Composables</h3>
-      <p>Funciones reutilizables como <code>useMouse()</code> o <code>useCounter()</code>.</p>
-
-      <h3>Vue Router</h3>
-      <pre><code>npm install vue-router@4</code></pre>
-
-      <h3>Pinia</h3>
-      <pre><code>npm install pinia</code></pre>
-    </DocCard>
-
-    <!-- Recursos -->
-    <DocCard title="📚 Recursos" description="Sitios recomendados">
-      <ul>
-        <li><a href="https://vuejs.org/guide/" target="_blank">Guía oficial Vue 3</a></li>
-        <li><a href="https://router.vuejs.org/" target="_blank">Vue Router</a></li>
-        <li><a href="https://pinia.vuejs.org/" target="_blank">Pinia</a></li>
-        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
-      </ul>
-    </DocCard>
-
-
-
-
-
-
-
-
+      <div class="style2">
+        <div class="intro_img">
+          <img src="../assets/introduccion/img6.png" alt="imagen quasar" />
+        </div>
+        <div class="text2">
+          <h2>Resumen</h2>
+          <h3>
+            - Vue es una herramienta que hace que las páginas web sean vivas e interactivas.<br>
+            - Es ideal para empezar porque es simple y poderosa.<br>
+            - Se aprende paso a paso: primero lo básico, luego componentes, rutas y APIs.<br>
+            - Todo lo que escribas en Vue se conecta con tus datos sin recargar la página.
+          </h3>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import DocCard from "../components/DocCard.vue"
+import { onMounted } from 'vue'
+import Header from '../components/header.vue'
+import NavBar from '../components/Navbar.vue'
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        } else {
+          entry.target.classList.remove('visible')
+        }
+      })
+    },
+    { threshold: 0.1 }
+  )
+
+ 
+  document.querySelectorAll('.intro_img img').forEach((img) => observer.observe(img))
+
+  
+  document.querySelectorAll('.text1 h2, .text2 h2').forEach((title) => observer.observe(title))
+  document.querySelectorAll('.text1 h3, .text2 h3').forEach((subtitle) => observer.observe(subtitle))
+  document.querySelectorAll('.text1 p, .text2 p').forEach((paragraph) => observer.observe(paragraph))
+})
 </script>
 
 <style scoped>
-
-.docs-container {
-  min-height: 100vh; 
-  margin: 0; 
-  padding: 40px 20px;
-  background-color: #111827;
-  color: #f9fafb;
-  font-family: "Segoe UI", Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 30px; 
+section {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1e293b, #0f172a);
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  padding-bottom: 60px;
 }
 
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 20%;
+}
 
-.manual-titulo{
+.style1,
+.style2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: 0 0 5px #42b883, 0 0 10px #42b883, 0 0 20px #2c9e6f;;
+  gap: 70px;
+  margin-bottom: 25px;
+}
+
+.style2 {
+  flex-direction: row-reverse;
 }
 
 
-.manual-titulo img{
-height: 50px;
+.intro_img img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transform: scale(0.9) translateY(40px);
+  filter: blur(5px);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.manual-titulo h1 {
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  transition: text-shadow 0.3s ease;
-    text-shadow: 0 0 5px #42b883, 0 0 10px #42b883, 0 0 20px #2c9e6f;
+.intro_img img.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+
+.intro_img img:hover {
+  transform: scale(1.05) rotateZ(1deg);
+  transition: transform 0.6s ease;
 }
 
 
-.titulo {
-display: flex;
-justify-content: center;
+.text1,
+.text2 {
+  max-width: 600px;
 }
 
 
+.text1 h2,
+.text2 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #38bdf8;
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  filter: blur(4px);
+  transition: all 1s ease;
+}
 
+.text1 h2.visible,
+.text2 h2.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.text1 h3,
+.text2 h3 {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(4px);
+  transition: all 1s ease-out;
+}
+
+.text1 h3.visible,
+.text2 h3.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+
+.text1 p,
+.text2 p {
+  color: #41B783;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(5px);
+  transition: all 1s ease-out;
+}
+
+.text1 p.visible,
+.text2 p.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
 </style>
